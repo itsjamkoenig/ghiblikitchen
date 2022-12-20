@@ -1,0 +1,243 @@
+*
+{
+    margin: 0;
+}
+body 
+{
+    display: grid;
+    margin: 0;
+    position: relative;
+    height: fit-content;
+    background-color: rgb(255, 249, 242);
+    grid-template-rows: 20vh 50vh 100vh 80vh 100vh 30vh;
+    grid-template-areas: "header"
+                         "cover"
+                         "ghibli"
+                         "about"
+                         "label"
+                         "footer";
+                         background-image: url("../images/pink-star.svg"), url("../images/pink-star.svg"), url("../images/yellow-star.svg"), url("../images/yellow-star.svg");
+                         background-repeat: no-repeat;
+                         background-position: 1% 20%, 120% 97%, 94% 49%, 0% 70%;
+                         background-size: 30%, 35%, 25%, 20%;
+}
+header 
+{
+    grid-area: header;
+}
+cover 
+{
+    grid-area: cover;
+    justify-self: left;
+    margin-left: 10%;
+}
+ghibli 
+{
+    grid-area: ghibli;
+    align-self: center;
+    justify-self: center;
+    padding: 10% 0 0 0;
+}
+about
+{
+    grid-area: about;
+    align-self: center;
+    justify-self: center; 
+    background: rgb(255, 218, 162);
+    width: 70vw;
+    height: 50vh;
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px #d1cbc3;
+}
+label
+{
+    grid-area: label;    
+    align-self: center;
+    justify-self: center;
+    padding: 0 0 10% 0;
+}
+footer 
+{
+    grid-area: footer;
+    background-color: #ffd6dd;
+}
+h2 img
+{
+    width: 70px;
+    height: 70px;
+}
+h3 
+{
+    font-family: 'Leckerli One', cursive;
+    font-size: 10em;
+    line-height: .7;
+    color: #ff4f7e;
+}
+h4 
+{
+    font-family: 'dapifer', serif;
+    font-size: 4em;
+    font-weight: normal;
+    color: #ff4f7e;
+    padding: 0 0 0 15%;
+}
+h5 
+{
+    font-family: 'dapifer', serif;
+    font-size: 2em;
+    font-weight: bold;
+    color: #19134D;
+    text-align: center;
+    letter-spacing: 2px;
+}
+p 
+{
+    font-family: 'proxima nova', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    text-align: center;
+    line-height: 1.3;
+    color: #19134D;
+}
+ghibli p
+{
+    margin: 0 29% 0 29%;
+}
+about p
+{
+    margin: 0 19% 0 19%;
+}
+label p
+{
+    margin: 0 29% 0 29%;
+}
+footer p
+{
+    font-size: 14px;
+}
+.about-items
+{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.coverimg img 
+{
+    padding: 0 0 0 50px;
+    width: 40%;
+    height: 40%;
+}
+.about {
+    padding: 8% 0 0 0;
+    
+}
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 25%;
+}
+.menu 
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 13.5px;    
+    position: relative;
+    width: 410px;
+    height: 70px;
+    background: #fff;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border-radius: 20px;
+}
+.menu-item 
+{
+    display: inline-block;
+    padding: 20px;
+}
+.menu-item a 
+{
+    text-decoration: none;
+    color: #19134D;
+    display: block;
+	position: relative;
+	padding: 0.2em 0;
+    transition: 0.5s;
+}
+.menu-item a:hover {
+    color: hotpink;
+    transition: 0.3s;
+    transform: translateY(-10px);
+}
+.menu-item a::after 
+{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.1em;
+	background-color: hotpink;
+	opacity: 0;
+	transition: opacity 300ms, transform 300ms;
+}
+.menu-item a::after 
+{
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+}
+.menu-item a:hover::after,
+.menu-item a:focus::after 
+{
+	opacity: 1;
+	transform: scale(1);
+}
+.labellevel
+{
+    content: url(../images/easy-01.png);
+    width: 5%;
+    height: 5%;
+    padding: 2% 2% 0 44%;
+}
+.labeltime
+{
+    content: url(../images/hour-01.png);
+    width: 5%;
+    height: 5%;
+}
+.footer
+{
+    text-align: center;
+    padding: 40px 0 0 0;
+}
+.social
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.social li
+{
+  list-style: none;
+  font-size: 1.3em;
+}
+.social li a
+{
+  display: inline-block;
+  transition: 0.5s;
+  color: #19134D;
+  padding-right: 48px;
+  padding-top: 10px;
+}
+.social li a:hover
+{
+    color: #ff4f7e;
+    transform: translateY(-10px);
+}

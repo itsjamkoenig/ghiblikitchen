@@ -1,0 +1,329 @@
+*
+{
+    margin: 0;
+}
+body 
+{
+    display: grid;
+    margin: 0;
+    position: relative;
+    height: fit-content;
+    background-color: #fff9f2;
+    grid-template-rows: 20vh 80vh 100vh 100vh 100vh 30vh;
+    grid-template-areas: "header"
+                         "cover"
+                         "what"
+                         "ingredients"
+                         "recipes"
+                         "footer";
+                         background-image: url("../images/pink-star.svg"), url("../images/pink-star.svg"), url("../images/pink-star.svg"), url("../images/yellow-star.svg"), url("../images/cover-shape.png");
+                         background-repeat: no-repeat;
+                         background-position: 70% 18%, 120% 97%, 94% 50%, 0% 40%, 100% -5.5%;
+                         background-size: 25%, 35%, 20%, 15%, 60%;
+}
+header 
+{
+    grid-area: header;
+}
+cover 
+{
+    grid-area: cover;
+    justify-self: left;
+    margin-left: 10%;
+}
+what 
+{
+    grid-area: what;
+    align-self: center;
+    justify-self: center;
+    padding: 10% 0 0 0;
+}
+ingredients
+{
+    grid-area: ingredients;
+    align-self: center;
+    justify-self: center; 
+    background: #ffd6dd;
+    width: 70vw;
+    height: 70vh;
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px #d1cbc3;
+}
+recipes
+{
+    grid-area: recipes;    
+    align-self: center;
+    justify-self: center;
+}
+footer 
+{
+    grid-area: footer;
+    background-color: #ffd6dd;
+}
+h2 img
+{
+    width: 70px;
+    height: 70px;
+}
+h3 
+{
+    font-family: 'Leckerli One', cursive;
+    font-size: 6em;
+    line-height: 1;
+    color: #ff4f7e;
+}
+h4 
+{
+    font-family: 'dapifer', serif;
+    font-size: 3em;
+    font-weight: normal;
+    color: #ff4f7e;
+    padding: 0 0 0 0;
+}
+h5 
+{
+    font-family: 'dapifer', serif;
+    font-size: 2em;
+    font-weight: bold;
+    color: #19134D;
+    text-align: center;
+    letter-spacing: 2px;
+}
+p
+{
+    font-family: 'proxima nova', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.3;
+    text-align: center;
+    color: #19134D;
+}
+what p
+{
+    margin: 0 28% 0 28%;
+}
+footer p
+{
+    font-size: 14px;
+}
+.cover-items
+{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 5% 0 0 0;
+}
+.labellevel
+{
+    content: url(../images/easy-01.png);
+    width: 12%;
+    height: 12%;
+    padding: 3% 6% 0 5%
+}
+.labeltime
+{
+    content: url(../images/thirty-01.png);
+    width: 12%;
+    height: 12%;
+}
+.coverimage 
+{
+    content: url(../images/breakfast-cover.png);
+    width: 50%;
+    height: 50%;
+}
+.ingredients 
+{
+    padding: 8% 0 0 0;
+    
+}
+.cover-text
+{
+    padding: 0 0 100px 0;
+}
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 25%;
+}
+.menu 
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 13.5px;    
+    position: relative;
+    width: 410px;
+    height: 70px;
+    background: #fff;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border-radius: 20px;
+}
+.menu-item 
+{
+    display: inline-block;
+    padding: 20px;
+}
+.menu-item a 
+{
+    text-decoration: none;
+    color: #19134D;
+    display: block;
+	position: relative;
+	padding: 0.2em 0;
+    transition: 0.5s;
+}
+.menu-item a:hover {
+    color: hotpink;
+    transition: 0.3s;
+    transform: translateY(-10px);
+}
+.menu-item a::after 
+{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.1em;
+	background-color: hotpink;
+	opacity: 0;
+	transition: opacity 300ms, transform 300ms;
+}
+.menu-item a::after 
+{
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+}
+.menu-item a:hover::after,
+.menu-item a:focus::after 
+{
+	opacity: 1;
+	transform: scale(1);
+}
+.ingredients
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 200px 0 50px;
+}
+.ingredientsimage img
+{
+    width: 180%;
+    height: 180%;
+    padding: 10% 0 0 0;
+}
+.listimage img
+{
+    width: 90%;
+    height: 90%;
+    padding: 0 0 0 130px;
+}
+.foodimage img
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#myImg:hover {
+    filter: drop-shadow(0 0 0.75rem #ffadc3);
+    animation: float 5s ease-out infinite
+}
+@keyframes float {
+    50%{
+        transform: translateY(60px);
+    }
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+/* Modal Content (image) */
+.modal-content {
+  margin: -4% 0 0 0;
+  display: block;
+  width: 60%;
+  max-width: 600px;
+}
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #ff4f7e;
+  font-size: 60px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #ffadc3;
+  text-decoration: none;
+  cursor: pointer;
+}
+.footer
+{
+    text-align: center;
+    padding: 40px 0 0 0;
+}
+.social
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.social li
+{
+  list-style: none;
+  font-size: 1.3em;
+}
+.social li a
+{
+  display: inline-block;
+  transition: 0.5s;
+  color: #19134D;
+  padding-right: 48px;
+  padding-top: 10px;
+}
+.social li a:hover
+{
+    color: #ff4f7e;
+    transform: translateY(-10px);
+}

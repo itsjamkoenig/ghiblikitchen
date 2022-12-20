@@ -1,0 +1,136 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo
+{
+  width: 70px;
+  height: 70px;
+}
+.showcase
+{
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+}
+.showcase.active
+{
+  right: 300px;
+}
+
+.showcase video
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffe1e1;
+  mix-blend-mode: soft-light;
+}
+.text
+{
+  position: relative;
+  z-index: 10;
+}
+
+.text h2
+{
+  font-size: 5em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  font-family: 'Leckerli One', cursive;
+}
+.text p
+{
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+.text a
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: small-caps;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 20px;
+  margin-top: 5%;
+  color: #19134D;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.text a:hover
+{
+  border-radius: 20px;
+  animation-duration: 10s;
+  background: rgb(255, 188, 199);
+  border-right: 5px solid #E55B80;
+  border-bottom: 5px solid #E55B80;
+}
+.social
+{
+  position: absolute;
+  z-index: 10;
+  bottom: 35%;
+  left: 23%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.social li
+{
+  list-style: none;
+  font-size: 1.75em;
+  padding: 0 20px 0 20px;
+}
+.social li a
+{
+  display: inline-block;
+  transition: 0.5s;
+  color: white;
+}
+.social li a:hover
+{
+  color: rgb(255, 188, 199);
+  transform: translateY(-10px);
+}

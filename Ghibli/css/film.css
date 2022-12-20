@@ -1,0 +1,310 @@
+*
+{
+    margin: 0;
+}
+body 
+{
+    display: grid;
+    margin: 0;
+    position: relative;
+    height: fit-content;
+    background-color: rgb(255, 249, 242);
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 20vh 50vh 150vh 30vh;
+    grid-template-areas: "header header"
+                         "cover scroll"
+                         "list list"
+                         "footer footer";
+                         background-image: url("../images/circle.svg");
+                         background-repeat: no-repeat;
+                         background-position: 180% -20%;
+                         background-size: 70%;
+}
+header 
+{
+    grid-area: header;
+}
+cover 
+{
+    grid-area: cover;
+    margin-left: 25%;
+    margin-top: 100px;
+}
+scroll
+{
+    grid-area: scroll;
+    margin-top: -50px;
+}
+list
+{
+    grid-area: list;
+}
+footer 
+{
+    grid-area: footer;
+    background-color: #ffd6dd;
+}
+h1 img
+{
+    width: 70px;
+    height: 70px;
+}
+h2 
+{
+    font-family: 'Leckerli One', cursive;
+    font-size: 10em;
+    line-height: .7;
+    color: #ff4f7e;
+}
+h3 
+{
+    font-family: 'dapifer', serif;
+    font-size: 4em;
+    font-weight: normal;
+    color: #ff4f7e;
+    padding: 0 0 3% 3%;
+}
+h4
+{
+    font-family: 'proxima nova', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    color: orange;
+}
+h5
+{
+    font-family: 'proxima nova', sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    color: orange;
+    padding: 5px;
+    text-decoration: 2px overline;
+}
+.movie-one {
+    position: absolute;
+    font-family: 'Leckerli One', cursive;
+    font-size: 2em;
+    line-height: .9;
+    text-align: center;
+    color: orange;
+    bottom: 37%;
+    left: 18%;
+}
+  .movie-two {
+    position: absolute;
+    font-family: 'Leckerli One', cursive;
+    font-size: 2em;
+    line-height: .9;
+    text-align: center;
+    color: orange;
+    bottom: 37%;
+    left: 41%;
+}
+.movie-three {
+    position: absolute;
+    font-family: 'Leckerli One', cursive;
+    font-size: 2em;
+    line-height: .9;
+    text-align: center;
+    color: orange;
+    bottom: 37%;
+    left: 63%;
+}
+.movie-four {
+    position: absolute;
+    font-family: 'Leckerli One', cursive;
+    font-size: 2em;
+    line-height: .9;
+    text-align: center;
+    color: orange;
+    bottom: 5%;
+    left: 15%;
+}
+.movie-five {
+    position: absolute;
+    font-family: 'Leckerli One', cursive;
+    font-size: 2em;
+    line-height: .9;
+    text-align: center;
+    color: orange;
+    bottom: 5%;
+    left: 42%;
+}
+.movie-six {
+    position: absolute;
+    font-family: 'Leckerli One', cursive;
+    font-size: 2em;
+    line-height: .9;
+    text-align: center;
+    color: orange;
+    bottom: 5%;
+    left: 62%;
+}
+p 
+{
+    font-family: 'proxima nova', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    text-align: center;
+    line-height: 1.3;
+    color: #19134D;
+}
+cover p
+{
+    padding-top: 10%;
+    text-align: left;
+    padding: 30px 50px 0 0;
+}
+footer p
+{
+    font-size: 14px;
+}
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 25%;
+}
+.menu 
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 13.5px;    
+    position: relative;
+    width: 410px;
+    height: 70px;
+    background: #fff;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border-radius: 20px;
+}
+.menu-item 
+{
+    display: inline-block;
+    padding: 20px;
+}
+.menu-item a 
+{
+    text-decoration: none;
+    color: #19134D;
+    display: block;
+	position: relative;
+	padding: 0.2em 0;
+    transition: 0.5s;
+}
+.menu-item a:hover {
+    color: hotpink;
+    transition: 0.3s;
+    transform: translateY(-10px);
+}
+.menu-item a::after 
+{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.1em;
+	background-color: hotpink;
+	opacity: 0;
+	transition: opacity 300ms, transform 300ms;
+}
+.menu-item a::after 
+{
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+}
+.menu-item a:hover::after,
+.menu-item a:focus::after 
+{
+	opacity: 1;
+	transform: scale(1);
+}
+div.scrollmenu img
+{
+    height: 350px;
+}
+div.scrollmenu 
+{
+    overflow: auto;
+    white-space: nowrap;
+} 
+div.scrollmenu a 
+{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding-right: 50px;
+    padding-top: 100px;
+    text-decoration: none;
+}
+div.scrollmenu a:hover 
+{
+    opacity: 50%;
+    transition: 0.3s;
+}
+.nested 
+{
+    display: grid;
+    padding: 400px 200px 0 300px;
+    position: relative;
+    height: fit-content;
+    grid-template-columns: 35vw 35vw 35vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 100px;
+    background-image: url("../images/yellow-star.svg"), url("../images/yellow-star.svg"), url("../images/yellow-star.svg"), url("../images/yellow-star.svg"), url("../images/yellow-star.svg"), url("../images/yellow-star.svg");
+    background-repeat: no-repeat;
+    background-position: 49% 104%, 20% 104%, 78% 104%, 49% 55%, 20% 55%, 78% 55%;
+    background-size: 20%;
+}
+.nested img
+{
+    height: 200px;
+}
+.nested a:hover 
+{
+    opacity: 50%;
+    transition: 0.3s;
+    animation: float 5s ease-out infinite
+}
+@keyframes float {
+    50%{
+        transform: translateY(20px);
+    }
+}
+.footer
+{
+    text-align: center;
+    padding: 40px 0 0 0;
+}
+.social
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.social li
+{
+  list-style: none;
+  font-size: 1.3em;
+}
+.social li a
+{
+  display: inline-block;
+  transition: 0.5s;
+  color: #19134D;
+  padding-right: 48px;
+  padding-top: 10px;
+}
+.social li a:hover
+{
+    color: #ff4f7e;
+    transform: translateY(-10px);
+}
